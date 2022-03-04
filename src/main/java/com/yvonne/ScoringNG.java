@@ -1,6 +1,6 @@
 package com.yvonne;
 
-public class Hello {
+public class ScoringNG {
     public static void main(String[] args) {
         String[] names = {"yvonne","emily","mary","kris"};
         int[] english = {80,70,60,50};
