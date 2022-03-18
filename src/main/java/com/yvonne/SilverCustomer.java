@@ -13,7 +13,7 @@ public class SilverCustomer extends Customer {
     public void print(){
         float offMoney = (prices/1000)*100;
         int bonus = (prices/1000)*100;
-        System.out.println(number + "\t" + prices + "\t" + (prices-offMoney)+ bonus);
+        System.out.println(number + "\t" + prices + "\t" + (prices-offMoney)+ "\t" +bonus);
     }
 }
 
