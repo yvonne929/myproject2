@@ -11,7 +11,7 @@ public class Customer {
     }
 
     public void print(){
-        float offMoney = (prices/1000)*100;
+        float offMoney = (prices/1000)*off*1000;
         System.out.println(number + "\t" + prices + "\t" + (prices-offMoney));
     }
 }
