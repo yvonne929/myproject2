@@ -1,9 +1,19 @@
 package com.yvonne;
 
 public class Customer {
-    int name;
+    String number;
     int prices;
-    int prices2;
+    float off = 0.1f;
 
+    public Customer(String number,int prices) {
+        this.number = number;
+        this.prices = prices;
+    }
 
+    public void print(){
+        float offMoney = (prices/1000)*100;
+        System.out.println(number + "\t" + prices + "\t" + (prices-offMoney));
+    }
 }
+
+
