@@ -1,4 +1,4 @@
-package com.yvonne.s0318;
+package com.yvonne.sales0318;
 
 public class Result {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.yvonne.s0311;
+package com.yvonne.score0311;
 
 public class Student {
     String name;

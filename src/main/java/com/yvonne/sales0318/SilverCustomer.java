@@ -1,10 +1,8 @@
-package com.yvonne.s0318;
-
-import com.yvonne.s0318.Customer;
+package com.yvonne.sales0318;
 
 public class SilverCustomer extends Customer {
         int bonus;
-        
+
     public SilverCustomer(String number,int prices){
         super(number,prices);
         this.bonus = bonus;

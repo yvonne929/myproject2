@@ -1,4 +1,4 @@
-package com.yvonne.s0318;
+package com.yvonne.sales0318;
 
 public class GoldenCustomer extends SilverCustomer {
     public GoldenCustomer(String number, int prices){
