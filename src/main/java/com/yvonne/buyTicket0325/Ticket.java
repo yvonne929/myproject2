@@ -1,4 +1,4 @@
-package com.yvonne.s0325;
+package com.yvonne.buyTicket0325;
 
 public class Ticket {
     public static final int TAIPEI_STATION = 100;
