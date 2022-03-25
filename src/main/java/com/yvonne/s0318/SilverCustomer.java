@@ -4,6 +4,7 @@ import com.yvonne.s0318.Customer;
 
 public class SilverCustomer extends Customer {
         int bonus;
+        
     public SilverCustomer(String number,int prices){
         super(number,prices);
         this.bonus = bonus;
