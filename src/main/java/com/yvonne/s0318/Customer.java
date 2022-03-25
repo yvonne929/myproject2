@@ -1,9 +1,10 @@
-package com.yvonne;
+package com.yvonne.s0318;
 
 public class Customer {
     String number;
     int prices;
     float off = 0.1f;
+    //屬性
 
     public Customer(String number,int prices) {
         this.number = number;

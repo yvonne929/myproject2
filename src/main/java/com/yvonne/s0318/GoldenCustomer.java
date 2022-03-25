@@ -1,6 +1,6 @@
-package com.yvonne;
+package com.yvonne.s0318;
 
-public class GoldenCustomer extends SilverCustomer{
+public class GoldenCustomer extends SilverCustomer {
     public GoldenCustomer(String number, int prices){
     super(number,prices);
     off = 0.2f;

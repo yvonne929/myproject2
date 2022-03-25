@@ -1,6 +1,6 @@
-package com.yvonne;
+package com.yvonne.s0318;
 
-import com.yvonne.Customer;
+import com.yvonne.s0318.Customer;
 
 public class SilverCustomer extends Customer {
         int bonus;

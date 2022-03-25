@@ -1,4 +1,4 @@
-package com.yvonne;
+package com.yvonne.s0311;
 
 public class Scoring {
     public static void main(String[] args) {
