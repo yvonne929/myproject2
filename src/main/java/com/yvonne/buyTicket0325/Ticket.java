@@ -41,7 +41,18 @@ public class Ticket {
         }
     }
 
-    public void print() {
-//        taipeiStation = 105;
+    public int getprice(int type) {
+
+        if(type==2){
+            this.price=(int)(this.price*0.8);
+        }
+        else if (type == 3){
+            this.price = (int)(this.price*0.5);
+        }
+        else if(type == 4){
+            this.price = (int)(this.price*0.9*2);
+        }
+        return this.price;
     }
 }
+
