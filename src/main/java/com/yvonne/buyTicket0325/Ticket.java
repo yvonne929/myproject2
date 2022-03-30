@@ -8,12 +8,40 @@ public class Ticket {
     //static -> 在多個地方保持只有一份資料
     //final -> 常數(固定數字)
 
-    int start;
-    int destination;
+    Station start;
+    Station destination;
     int price;
 
-    public Ticket(int start, int destination){
+    public Ticket(Station start, Station destination){
         this.start = start;
         this.destination = destination;
+
+        if(start.id==100 && destination.id==300){
+            this.price=1500;
+        }
+
+        if(start.id == 100 && destination.id == 200){
+            this.price = 600;
+        }
+
+        if(start.id == 200 && destination.id == 300){
+            this.price = 900;
+        }
+
+        if(start.id==300 && destination.id==100){
+            this.price=1500;
+        }
+
+        if(start.id == 200 && destination.id == 100){
+            this.price = 600;
+        }
+
+        if(start.id == 300 && destination.id == 200){
+            this.price = 900;
+        }
+    }
+
+    public void print() {
+//        taipeiStation = 105;
     }
 }
