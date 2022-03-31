@@ -6,9 +6,9 @@ public class Tester {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int total=0;
-        int regular=0,student=0,senior=0,round=0;
-        int regularNum=0,studentNum=0,seniorNum=0,roundNum=0;
+        int total=0;//總金額
+        int regular=0,student=0,senior=0,round=0;//票價
+        int regularNum=0,studentNum=0,seniorNum=0,roundNum=0;//票的張數
         while (true) {
             System.out.println("Your start station?(enter 0 to stop)(1:Taipei , 2:Taichung , 3:Kaohsiung)");
             int start = scanner.nextInt();
@@ -56,10 +56,11 @@ public class Tester {
                 A=Station.KAOHSIUNG_STATION;
                 B=Station.TAICHUNG_STATION;
             }
+
             Ticket ticket = new Ticket(A, B);
             price=ticket.getprice(type) * number;
             System.out.println("the price is: "+price);
-            total+=price;
+           // total+=price;
             if (type==1){
                 regular+=price;
                 regularNum++;

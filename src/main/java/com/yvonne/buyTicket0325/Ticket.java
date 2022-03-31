@@ -42,7 +42,6 @@ public class Ticket {
     }
 
     public int getprice(int type) {
-
         if(type==2){
             this.price=(int)(this.price*0.8);
         }
