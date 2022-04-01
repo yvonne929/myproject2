@@ -5,18 +5,61 @@ import java.util.Scanner;
 public class Tester {
     public static void main(String[] args) {
 
+
         Scanner scanner = new Scanner(System.in);
-        int total=0;//總金額
-        int regular=0,student=0,senior=0,round=0;//票價
-        int regularNum=0,studentNum=0,seniorNum=0,roundNum=0;//票的張數
+        System.out.println("Your start station?(1:Taipei , 2:Taichung , 3:Kaohsiung)");
+        int choose = scanner.nextInt();
+        Station start = null;
+        switch (choose){
+            case 1:
+                start = Station.TAIPEI_STATION;
+                break;
+            case 2:
+                start = Station.TAICHUNG_STATION;
+                break;
+            case 3:
+                start = Station.KAOHSIUNG_STATION;
+                break;
+        }
+
+        System.out.println("Your destination station?(1:Taipei , 2:Taichung , 3:Kaohsiung)");
+        choose = scanner.nextInt();
+        Station destination = null;
+        switch (choose){
+            case 1:
+                destination = Station.TAIPEI_STATION;
+                break;
+            case 2:
+                destination = Station.TAICHUNG_STATION;
+                break;
+            case 3:
+                destination = Station.KAOHSIUNG_STATION;
+                break;
+        }
+
+        System.out.println("what type is your ticket?(1:Taipei , 2:Taichung , 3:Kaohsiung)");
+        choose = scanner.nextInt();
+        Ticket ticket = null;
+        switch (choose){
+            case 1:
+                ticket = new Ticket(start,destination);
+                break;
+            case 2:
+                ticket = new StudentTicket(start,destination);
+                break;
+        }
+        ticket.print();
+        /*int total=0;
+        int regular=0,student=0,senior=0,round=0;
+        int regularNum=0,studentNum=0,seniorNum=0,roundNum=0;
         while (true) {
             System.out.println("Your start station?(enter 0 to stop)(1:Taipei , 2:Taichung , 3:Kaohsiung)");
             int start = scanner.nextInt();
             if(start==0){
-                System.out.println("一般票"+regularNum+"張"+regular+"元");
-                System.out.println("一般票"+studentNum+"張"+student+"元");
-                System.out.println("一般票"+seniorNum+"張"+senior+"元");
-                System.out.println("一般票"+roundNum+"張"+round+"元");
+                System.out.println("regular"+regularNum+"p"+regular+"d");
+                System.out.println("regular"+studentNum+"p"+student+"d");
+                System.out.println("regular"+seniorNum+"p"+senior+"d");
+                System.out.println("regular"+roundNum+"p"+round+"d");
                 System.out.println("the total price is: " + total);
                 break;
             }
@@ -77,6 +120,6 @@ public class Tester {
                 round+=price;
                 roundNum++;
             }
-        }
+        }*/
     }
 }

@@ -4,15 +4,47 @@ public class Ticket {
     public static final int TAIPEI_STATION = 100;
     public static final int TAICHUNG_STATION = 200;
     public static final int KAOHSIUNG_STATION = 300;
-    //public -> 別的class也可以用
-    //static -> 在多個地方保持只有一份資料
-    //final -> 常數(固定數字)
+
 
     Station start;
     Station destination;
     int price;
 
-    public Ticket(Station start, Station destination){
+    public Ticket(Station start, Station destination) {
+        this.start = start;
+        this.destination = destination;
+        if (start == Station.TAIPEI_STATION) {
+            destination = Station.TAICHUNG_STATION;
+            price = 600;
+        } else {
+            destination = Station.KAOHSIUNG_STATION;
+            price = 1500;
+        }
+        if (start == Station.TAICHUNG_STATION) {
+            destination = Station.TAIPEI_STATION;
+            price = 600;
+        } else {
+            destination = Station.KAOHSIUNG_STATION;
+            price = 900;
+        }
+        if (start == Station.KAOHSIUNG_STATION) {
+            destination = Station.TAIPEI_STATION;
+            price = 1500;
+        } else {
+            destination = Station.TAICHUNG_STATION;
+            price = 900;
+        }
+    }
+
+    public void print(){
+        System.out.print(price);
+    }
+}
+
+
+
+
+   /* public Ticket(Station start, Station destination){
         this.start = start;
         this.destination = destination;
 
@@ -52,6 +84,6 @@ public class Ticket {
             this.price = (int)(this.price*0.9*2);
         }
         return this.price;
-    }
-}
+    }*/
+
 
