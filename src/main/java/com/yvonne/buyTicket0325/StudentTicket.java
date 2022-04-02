@@ -6,6 +6,7 @@ public class StudentTicket extends Ticket{
         super(start, destination);
         this.off = off;
         off = 0.9f;
+        price = prices(price);
     }
 
     public int prices(int p){

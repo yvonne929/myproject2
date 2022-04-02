@@ -47,6 +47,8 @@ public class Tester {
                 break;
             case 3:
                 ticket = new SeniorTicket(start,destination);
+            case 4:
+                ticket = new RoundTicket(start,destination);
         }
         ticket.print();
         /*int total=0;
