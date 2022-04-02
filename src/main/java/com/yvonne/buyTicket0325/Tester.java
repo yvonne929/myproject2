@@ -11,6 +11,7 @@ public class Tester {
         switch (choose){
             case 1:
                 start = Station.TAIPEI_STATION;
+
                 break;
             case 2:
                 start = Station.TAICHUNG_STATION;
@@ -47,8 +48,10 @@ public class Tester {
                 break;
             case 3:
                 ticket = new SeniorTicket(start,destination);
+                break;
             case 4:
                 ticket = new RoundTicket(start,destination);
+                break;
         }
         ticket.print();
         /*int total=0;

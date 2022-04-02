@@ -6,8 +6,7 @@ public class DiscountCustomer extends Customer{
     off = 0.9f;
     }
     @Override
-    public void print(){
-        float offMoney =prices*off ;
-        System.out.println(number + "\t" + prices +"\t" + offMoney);
+    public float backMoney(){
+        return prices*off;
     }
 }

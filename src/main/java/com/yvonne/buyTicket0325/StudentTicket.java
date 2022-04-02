@@ -1,16 +1,9 @@
 package com.yvonne.buyTicket0325;
 
 public class StudentTicket extends Ticket{
-        float off;
+        float off = 0.9f;
     public StudentTicket(Station start, Station destination){
         super(start, destination);
-        this.off = off;
-        off = 0.9f;
-        price = prices(price);
-    }
-
-    public int prices(int p){
         price = (int)(price*off);
-        return price;
     }
 }
