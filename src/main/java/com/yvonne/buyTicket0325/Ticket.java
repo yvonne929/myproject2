@@ -14,25 +14,26 @@ public class Ticket {
         this.start = start;
         this.destination = destination;
         if (start == Station.TAIPEI_STATION) {
-            destination = Station.TAICHUNG_STATION;
-            price = 600;
-        } else {
-            destination = Station.KAOHSIUNG_STATION;
-            price = 1500;
+            if (destination == Station.TAICHUNG_STATION) {
+                price = 600;
+            } else {
+                price = 1500;
+            }
         }
-        if (start == Station.TAICHUNG_STATION) {
-            destination = Station.TAIPEI_STATION;
-            price = 600;
-        } else {
-            destination = Station.KAOHSIUNG_STATION;
-            price = 900;
+        else if(start == Station.TAICHUNG_STATION) {
+                if (destination == Station.TAIPEI_STATION) {
+                    price = 600;
+                } else {
+                    price = 900;
+                }
         }
-        if (start == Station.KAOHSIUNG_STATION) {
-            destination = Station.TAIPEI_STATION;
-            price = 1500;
-        } else {
-            destination = Station.TAICHUNG_STATION;
-            price = 900;
+        else if(start == Station.KAOHSIUNG_STATION){
+            if(destination == Station.TAIPEI_STATION){
+                price = 1500;
+            }
+            else{
+                price = 900;
+            }
         }
     }
 

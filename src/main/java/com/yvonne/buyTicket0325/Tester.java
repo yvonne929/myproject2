@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your start station?(1:Taipei , 2:Taichung , 3:Kaohsiung)");
-        int choose = scanner.nextInt();
+        int choose = Integer.parseInt(scanner.next());
         Station start = null;
         switch (choose){
             case 1:
@@ -23,7 +21,7 @@ public class Tester {
         }
 
         System.out.println("Your destination station?(1:Taipei , 2:Taichung , 3:Kaohsiung)");
-        choose = scanner.nextInt();
+        choose = Integer.parseInt(scanner.next());
         Station destination = null;
         switch (choose){
             case 1:
@@ -37,8 +35,8 @@ public class Tester {
                 break;
         }
 
-        System.out.println("what type is your ticket?(1:Taipei , 2:Taichung , 3:Kaohsiung)");
-        choose = scanner.nextInt();
+        System.out.println("what type is your ticket?(1:regular , 2:student , 3:senior , 4.round)");
+        choose = Integer.parseInt(scanner.next());
         Ticket ticket = null;
         switch (choose){
             case 1:
@@ -47,6 +45,8 @@ public class Tester {
             case 2:
                 ticket = new StudentTicket(start,destination);
                 break;
+            case 3:
+                ticket = new SeniorTicket(start,destination);
         }
         ticket.print();
         /*int total=0;
@@ -56,10 +56,10 @@ public class Tester {
             System.out.println("Your start station?(enter 0 to stop)(1:Taipei , 2:Taichung , 3:Kaohsiung)");
             int start = scanner.nextInt();
             if(start==0){
-                System.out.println("regular"+regularNum+"p"+regular+"d");
-                System.out.println("regular"+studentNum+"p"+student+"d");
-                System.out.println("regular"+seniorNum+"p"+senior+"d");
-                System.out.println("regular"+roundNum+"p"+round+"d");
+                System.out.println("regular"+regularNum+"p"+regular+"dollars");
+                System.out.println("student"+studentNum+"p"+student+"dollars");
+                System.out.println("senior"+seniorNum+"p"+senior+"dollars");
+                System.out.println("round"+roundNum+"p"+round+"dollars");
                 System.out.println("the total price is: " + total);
                 break;
             }
