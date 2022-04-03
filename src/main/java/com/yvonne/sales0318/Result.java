@@ -19,6 +19,9 @@ public class Result {
         for (int i = 0; i < 5; i++) {
             Cus.get(i).print();
         }
+
+        System.out.println();
+
         for(Customer c : Cus) {
             c.print();
         }
