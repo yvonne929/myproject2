@@ -16,8 +16,9 @@ public class Scoring {
         score.add(new Student("Jack", 78, 62));
         score.add(new Student("Hank", 60, 30));
         score.add(new GraduateStudent("Jane", 65, 82, 79));
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < score.size() ; i++) {
             score.get(i).print();
         }
+        System.out.println();
     }
 }

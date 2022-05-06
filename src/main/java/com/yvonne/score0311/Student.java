@@ -1,6 +1,6 @@
 package com.yvonne.score0311;
 
-public class Student {
+public class Student implements Printable{
     /*1
      2 -> 1
      3 -> 2 -> 1*/
@@ -27,14 +27,21 @@ public class Student {
         english = -1;
         math = -1;*/
     }
-
-    public void print() {
+    public void print(){
         System.out.print(name + "\t" + english + "\t" + math +"\t" + getAverage());
         if (getAverage() < 60){
             System.out.print("*");
         }
         System.out.println();
     }
+
+    /*public void print() {
+        System.out.print(name + "\t" + english + "\t" + math +"\t" + getAverage());
+        if (getAverage() < 60){
+            System.out.print("*");
+        }
+        System.out.println();
+    }*/
 
     public int getAverage() {
         return (english+math)/2;
