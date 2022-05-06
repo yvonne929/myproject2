@@ -1,6 +1,10 @@
 package com.yvonne.buyTicket0325;
 
 import java.util.Scanner;
+        /*台北(100) -> 台中 $500
+         台中(200) -> 高雄 $600
+         台北 -> 高雄(400) $1100
+        */
 
 public class Tester {
     public static void main(String[] args) {
@@ -11,7 +15,6 @@ public class Tester {
         switch (choose){
             case 1:
                 start = Station.TAIPEI_STATION;
-
                 break;
             case 2:
                 start = Station.TAICHUNG_STATION;
