@@ -26,6 +26,15 @@ public class Runner {
             System.out.println(d2.getTime());
             int mins = (int)((d2.getTime()-d1.getTime()))/1000/60;//毫秒差值轉為分鐘
             int fee = 30*(mins/60);//一小時收30元
+            System.out.println("fee:"+fee);
+
+            //3hr14min -> $90 , 3hr15min -> $120
+            if (mins%60 <= 14){
+                fee = 30*(mins/60);
+            }
+            else {
+                fee = 30*(mins/60+1);
+            }
         }
         catch (Exception e) {
             System.out.println("exit wrong format");
