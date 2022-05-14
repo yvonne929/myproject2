@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Runner {
     public static void main(String[] args) {
-        String enterTime = "08:00";
+        String enterTime = "08:15";
         String exitTime = "11:00";
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");//設定格式
         Date d1 = null;
@@ -26,15 +26,15 @@ public class Runner {
             System.out.println(d2.getTime());
             int mins = (int)((d2.getTime()-d1.getTime()))/1000/60;//毫秒差值轉為分鐘
             int fee = 30*(mins/60);//一小時收30元
-            System.out.println("fee:"+fee);
-
             //3hr14min -> $90 , 3hr15min -> $120
             if (mins%60 <= 14){
                 fee = 30*(mins/60);
             }
-            else {
-                fee = 30*(mins/60+1);
+            else if(mins%60 >=15){
+                fee = 30*((mins/60)+1);
             }
+            System.out.println("fee:"+fee);
+
         }
         catch (Exception e) {
             System.out.println("exit wrong format");
