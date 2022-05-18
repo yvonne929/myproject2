@@ -36,6 +36,17 @@ public class Runner {
                 fee = 30*((mins/60)+1);
             }
             System.out.println("fee:"+fee);
+
+            /*
+            3hr15min -> $105
+            if (mins%60 <= 14){
+                fee = 30*(mins/60);
+            }
+            else{
+                fee = 30*(mins/60)+15;
+            }
+            System.out.println("fee:"+fee);
+            */
         }
         catch (Exception e) {
             System.out.println("exit wrong format");
