@@ -2,6 +2,8 @@ package com.yvonne.ui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MyWindow {
     public static void main(String[] args) {
@@ -13,9 +15,17 @@ public class MyWindow {
         frame.setLayout(new FlowLayout());//讓新的component在前一個的右邊
         frame.add(button);//在frame裡添加component
         frame.add(new JButton("Testing"));
+        //匿名類別 Anonymous class
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Hello World");
+            }
+        });
+        /*有名類別
         MyActionListener listener = new MyActionListener();//一個有人碰了button會呼叫類別裡的東西的類別
         button.addActionListener(listener);
-
+        */
         frame.setVisible(true);
         //顯示介面
         //()裡是boolean值，true會顯示介面，false則不會
