@@ -1,6 +1,7 @@
 package com.yvonne.ui;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MyWindow {
     public static void main(String[] args) {
@@ -9,7 +10,11 @@ public class MyWindow {
         frame.setLocation(300,200);//設定介面位置(原在左上角)
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);//設定行為(關掉介面程式也會停止)
         JButton button = new JButton("OK");//add component(元件)
+        frame.setLayout(new FlowLayout());//讓新的component在前一個的右邊
         frame.add(button);//在frame裡添加component
+        frame.add(new JButton("Testing"));
+        MyActionListener listener = new MyActionListener();//一個有人碰了button會呼叫類別裡的東西的類別
+        button.addActionListener(listener);
 
         frame.setVisible(true);
         //顯示介面
