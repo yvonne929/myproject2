@@ -8,7 +8,8 @@ import java.util.Random;
 
 public class GuessFrame extends JFrame {
     JButton button = new JButton("guess");
-    JLabel label = new JLabel(" ");
+    JLabel label = new JLabel("guess number 1-100");
+    JLabel label2 = new JLabel(" ");
     JTextField textField = new JTextField(5);
     int secret = new Random().nextInt(100)+1;
 
@@ -21,28 +22,36 @@ public class GuessFrame extends JFrame {
     System.out.println("secret:"+secret);
 
     setLayout(new FlowLayout());
+    add(label);
     add(textField);
     add(button);
-    add(label);
+    add(label2);
     button.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        for (int i = 1; i < 5; i++) {
-        int number = Integer.parseInt(textField.getText());
+        boolean win = false;
         int MAX = 100;
         int min = 1;
-        if (number > secret){
-            MAX = number;
-            label.setText(min+"~"+MAX);
+
+        for (int i = 1; i < 5; i++) {
+            label2.setText(min+" to "+MAX);
+            int number = Integer.parseInt(textField.getText());
+            if (number > secret){
+                MAX = number;
+            }
+            else if (number < secret){
+                min = number;
+            }
+            else if (number == secret){
+                win = true;
+                break;
+            }
         }
-        else if (number < secret){
-            min = number;
-            label.setText(min+"~"+MAX);
+        if (win){
+            label2.setText("you win");
         }
-        else if (number == secret){
-            label.setText("Bingo!");
-            break;
-        }
+        else {
+            label2.setText("you loose");
         }
     }
 });
