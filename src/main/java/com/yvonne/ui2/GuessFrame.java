@@ -12,6 +12,10 @@ public class GuessFrame extends JFrame {
     JLabel label2 = new JLabel(" ");
     JTextField textField = new JTextField(5);
     int secret = new Random().nextInt(100)+1;
+    boolean win = false;
+    int MAX = 100;
+    int min = 1;
+    int count = 0;
 
     public GuessFrame(){
     super();
@@ -29,30 +33,23 @@ public class GuessFrame extends JFrame {
     button.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        boolean win = false;
-        int MAX = 100;
-        int min = 1;
-
-        for (int i = 1; i < 5; i++) {
-            label2.setText(min+" to "+MAX);
-            int number = Integer.parseInt(textField.getText());
-            if (number > secret){
-                MAX = number;
-            }
-            else if (number < secret){
-                min = number;
-            }
-            else if (number == secret){
-                win = true;
-                break;
-            }
-        }
-        if (win){
+        int number = Integer.parseInt(textField.getText());
+        if (number > secret) {
+            MAX = number;
+        } else if (number < secret) {
+            min = number;
+        } else if (number == secret) {
+            win = true;
             label2.setText("you win");
         }
-        else {
+        if (count >= 5) {
             label2.setText("you loose");
         }
+        if (count < 5 && win == false) {
+            label2.setText(min + " to " + MAX);
+        }
+
+        count++;
     }
 });
     setVisible(true);
