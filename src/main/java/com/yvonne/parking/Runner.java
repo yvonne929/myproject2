@@ -18,7 +18,7 @@ public class Runner {
             System.out.println("enter wrong format");
         }
 
-        //long ms = 3*60*60*1000; //3小時換算成毫秒(一分鐘 = 1000毫秒)
+        //long ms = 3*60*60*1000; //3小時換算成毫秒(一秒 = 1000毫秒)
 
         try {
             Date d2 = sdf.parse(exitTime);
