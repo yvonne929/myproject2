@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Runner {
     public static void main(String[] args) {
-        String enterTime = "08:00";
+        String enterTime = "08:a0";
         String exitTime = "11:14";
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");//設定格式
         Date d1 = null;
