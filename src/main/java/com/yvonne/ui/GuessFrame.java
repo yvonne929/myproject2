@@ -19,10 +19,11 @@ public class GuessFrame extends JFrame {
         setLocation(300,200);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+        System.out.println(secret);
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println(secret);
                 int num = Integer.parseInt(number.getText());
                 //System.out.println(num);
                 //System.out.println("Java");//顯示成文字(不在視窗內)
