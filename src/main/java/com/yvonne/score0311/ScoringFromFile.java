@@ -18,6 +18,7 @@ public class ScoringFromFile {
             }
             */
 
+            //顯示字串
             BufferedReader reader = new BufferedReader(fileReader);
             String line = reader.readLine();
             while (line != null){
