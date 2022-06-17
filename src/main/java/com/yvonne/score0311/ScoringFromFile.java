@@ -21,7 +21,12 @@ public class ScoringFromFile {
             BufferedReader reader = new BufferedReader(fileReader);
             String line = reader.readLine();
             while (line != null){
-                System.out.println(line);
+                String[] token = line.split(",");
+                String name =token[0];
+                int english = Integer.parseInt(token[1]);
+                int math = Integer.parseInt(token[2]);
+                Student student = new Student(name, english, math);
+                student.print();
                 line = reader.readLine();
             }
         }
