@@ -1,6 +1,6 @@
 package com.yvonne.buyTicket0325;
 
-public class RoundTicket extends StudentTicket {
+public class RoundTicket extends StudentTicket{
     public RoundTicket(Station start, Station destination){
         super(start, destination);
         off = 0.9f;
